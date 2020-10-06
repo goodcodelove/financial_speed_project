@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+	<h1 class=" col-md-12 text text-center text-info">Nos cartes en promotion</h1>
+	{% for carte in cartes_promo %}
+	<div class="col-sm-4 text-center ">
+		<a href="{% url 'transactions:carte' carte_id=carte.id %}">
+			<img class="img-responsive" src="{{ carte.picture.url }}" alt="{{ carte.libelle }}">
+		</a>
+		<p style="color: color: #f33c1f;">
+			{{ carte.libelle }}<br><a href=""><a href="{% url 'transactions:carte' carte_id=carte.id %}">Ajouter au panier</a>	
+		</p>
+		</div>
+		{% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
+		{% endfor %}		
+	</div>
+</div>
+{% endblock %}

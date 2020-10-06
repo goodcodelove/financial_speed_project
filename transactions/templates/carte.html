@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+	<h1 class="col-md-12 text-center text-info">Achetez votre carte</h1>
+	<div class="col-md-6">
+	  <img class="text text-center" src="{{ picture }}" alt="{{ libelle }}" class="img-responsive">
+	  <p class="text text-bold"> Prix : <span style="font-weight: bold;">{{ prix }} FCFA</span> </p>
+	  <p style="text-align: justify;">
+	  	{{ description }}
+	  </p>
+	</div>
+	<div class="col-md-6">
+		<form method="POST" action="{% url 'transactions:carte' carte_id=carte_id %}">
+			{% csrf_token %}
+			{% for field in form %}
+				<p>
+					{{ field.label_tag }}<br>
+					{{ field }}
+				</p>
+			{% endfor %}
+			<button  type="submit" class="btn btn-success">COMMANDER</button>
+		</form>
+		{% autoescape off %}
+			{% if errors %}
+				{% for error in errors %}
+				<p style="color: red;">{{ error }}</p>
+				{% endfor %}
+			{% endif %}
+		{% endautoescape %}
+	</div>
+</div>
+{% endblock %}

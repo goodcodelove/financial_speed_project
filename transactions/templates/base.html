@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock %}</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  {% load static %}
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'transactions/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'transactions/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'transactions/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'transactions/assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'transactions/assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'transactions/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'transactions/assets/css/style.css' %}" rel="stylesheet">
+
+  <style type="text/css">
+    .asteriskField {
+      display: none;
+    }
+    .form-text {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href=""><span>FISP</span><img src="{% static 'transactions/assets/img/logo.png' %}" alt="Financial-Speed" class="img-fluid"></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class=""><a href="{% url 'index' %}">Accueil</a></li>
+          <li class="drop-down"><a href="">Cartes prepayees</a>
+            <ul>
+              <li><a href="{% url 'transactions:promo' %}">Promotions</a></li>
+              <li><a href="{% url 'transactions:cartes' %}">Toutes nos cartes</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="{% url 'transactions:buy' %}">Cryptomonnaie</a>
+            <ul>
+              <li><a href="{% url 'transactions:buy' %}">Acheter</a></li>
+              <li><a href="{% url 'transactions:sell' %}">Vendre</a></li>
+            </ul>
+          </li>
+          <li class=""><a href="{% url 'transactions:transfert' %}">Transfert d'argent</a></li>
+          {% if user.is_authenticated %}
+            <li class="get-started"><a href="{% url 'logout' %}">Deconnexion</a></li>
+            <li class="get-started drop-down"><a href="">Compte</a>
+              <ul>
+                <li><a style="color: white;" href="#">Sponsors</a></li>
+                <li><a style="color: white;" href="#">Opérations</a></li>
+                <li><a style="color: white;" href="#">Informations</a></li>
+                <li><a style="color: white;" href="{% url 'password_change' %}">Mot de passe</a></li>
+              </ul>
+            </li>
+          {% else %}
+            <li class="get-started"><a href="{% url 'login' %}">Login</a></li>
+            <li class="get-started"><a href="{% url 'transactions:signup' %}">S'inscrire</a></li>
+          {% endif %}
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <div class="container" style="margin-top: 72px;">
+      {% block content %}{% endblock %}
+    </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Souscrire à notre Newsletter</h4>
+            <p>Soyez informez de nos actualités, produits, offres, promotions.</p>
+            <form action="" method="post">
+              <input type="email" name="email" placeholder="votre email"><input type="submit" value="Souscrire">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
+            <h3>Financial-Speed</h3>
+            <p>
+              Sogefiha <br>
+              Abidjan, Koumassi<br>
+              Cote d'ivoire <br><br>
+              <strong>Numero :</strong> +225 49 70 61 61/ 62 62<br>
+              <strong>Email:</strong> contact@financial-speed.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cartes prépayées</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cryptomonnaie</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Transfert d'argent</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Devenir partenaire</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Conditions d'utilisation</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
+            <h4>Nos Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cartes prépayées</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Cryptomonnaie</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Transfert d'argent</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Sécurité informatique et électronique</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Billeterie, hotelerie, immobiler</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="400">
+            <h4>Nos réseaux sociaux</h4>
+            <p>Suivez-nous sur nos réseaux sociaux</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Financial-Speed</span></strong>. Tous droits réservés
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        developpé par <a href="#">Himalaya Digital</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'transactions/assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'transactions/assets/vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'transactions/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

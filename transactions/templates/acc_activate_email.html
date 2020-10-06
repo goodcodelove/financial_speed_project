@@ -1,0 +1,8 @@
+{% autoescape off %}
+	Salut {{ user.username }},
+	S'il vous plait cliquez sur le lien ou copiez le dans la barre d'adresse pour confirmer votre inscription.
+	
+	http://{{ domain }}{% url 'transactions:activate' uidb64=uid token=token %}
+
+	Si vous pensez que ce n'est pas vous , alors ignorez juste ce message.
+{% endautoescape %}

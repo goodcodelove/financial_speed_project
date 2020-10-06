@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center" style="color: #f33c1f">Vendre vos cryptomonnaie </h1>
+			<form method="post">
+				<div class="form-group">
+					<label for="adr">Votre adresse : </label>
+					<input type="text" name="adr" id="adr" placeholder="Adresse de votre portefeuille" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for='montant'>Quantité : </label>
+					<input type="number" name="montant" placeholder="Quantité à vendre" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="crypto">Choisissez une monnaie</label>
+					<select class="form-control" id="crypto">
+						<option value="BTC">BTC</option>
+						<option value="Bitcoin cash">Bitcoin cash</option>
+						<option value="ether">Ether</option>
+						<option value="stellar">Stellar</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="op">Choisissez un operateur</label>
+					<select class="form-control" id="op">
+						<option value="orange">Orange</option>
+						<option value="mtn">MTN</option>
+						<option value="moov">MOOV</option>
+					</select>
+				</div>
+				<button type="submit" class="btn-success">VENDRE</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

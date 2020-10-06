@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row justify-content-between">
+          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
+            <img src="{% static 'transactions/assets/img/about-img.svg' %}" class="img-fluid" alt="" data-aos="zoom-in">
+          </div>
+          <div class="col-lg-6 pt-5 pt-lg-0">
+            <h3 data-aos="fade-up">Financial-Speed</h3>
+            <p data-aos="fade-up" data-aos-delay="100">
+             Financial-Speed est une entreprise spécialisée et investie dans la monétique.Elle dispose entre autre de services supplémentaires à savoir la sécurité informatique, l'électronique, la billeterie et l'immobiler. Basée en Cote d'Ivoire (ABIDJAN) elle a été créee en 2018 et aujourd'hui est comptée aprmi les entreprises de distributions de services monétaires.
+            </p>
+            <div class="row">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-receipt"></i>
+                <h4>Services monetaires</h4>
+                <p>Facilitez vous la vie avec nos différents services monetaires</p>
+              </div>
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-cube-alt"></i>
+                <h4>billeterie, Immobiler, Sécurité informatique, électronique</h4>
+                <p>Plusieurs services pour vos besoins.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Services</h2>
+          <p>Consulter quelques services que nous vous offrons. Notre platforme respecte les standards de sécurités contre les failles web</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Cartes prépayées</a></h4>
+              <p class="description">Faites des achats en ligne avec nos différentes cartes prépayées.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Cryptomonnaies</a></h4>
+              <p class="description">Il est désormais facile d'acheter et de vendre de la cryptommonnaie. Vous pouvez également ouvir un compte. (Bitcoin, Bitcoin cash, Ethereum, Ripple..)</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Transfert d'argent</a></h4>
+              <p class="description">Envoyez facilement de l'argent à travers le monde.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Billeterie, immobiler, sécurité informatique</a></h4>
+              <p class="description">Financial-Speed vous permet d'acheter des tickets d'evenements en ligne, d'acquerir facilement des biens immeubles, et de consulter des experts en sécurité informatique pour votre entreprise.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+ 
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Quelques Partenaires</h2>
+          <p>Ils nous font confiance</p>
+        </div>
+
+        <div class="owl-carousel clients-carousel" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'transactions/assets/img/clients/sgmini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/ecobankmini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/westermini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/payeermini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/baobabmini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/riamini.jpg' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/perfectmoneymini.png' %}" alt="">
+          <img src="{% static 'transactions/assets/img/clients/mobilemoneymini.jpg' %}" alt="">
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Nous joindre</h2>
+          <p>Contactez-nous pour plus d'informations</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Siège social:</h4>
+                <p>Koumassi, sogefiha</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>contact@financial-speed.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Numero :</h4>
+                <p>+225 49 70 61 61/ +225 49 70 62 62</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15891.10051024061!2d-3.9713654231149453!3d5.297747638506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1efa713710a2f%3A0xad2398d1ecb9c6e5!2sFinancial%20Speed!5e0!3m2!1sfr!2sci!4v1600753068406!5m2!1sfr!2sci" width="100%" height="290" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Votre nom</label>
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Votre prénom</label>
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Sujet</label>
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">VOtre message à été envoyé. Merci!</div>
+              </div>
+              <div class="text-center"><button type="submit">Envoyer le message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

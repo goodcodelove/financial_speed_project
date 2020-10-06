@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="row">
+	<div class="col-md-12">
+		<h1 class="text text-center text-info">Envoyez de l'argent</h1>
+		<form method="post">
+		<div class="form-group">
+			<label for='nom'>Nom complet du destinataire</label><input type="text" name="dest" placeholder="A qui envoyez-vous de l'argent ?" id='nom' class="form-control">
+		</div>
+		<div class="form-group">
+			<label id="numero">Numero ou compte du destinataire</label><input type="number" name="numero" placeholder="Numero de téléphone ou numero du compte vers lequel vous envoyez de l'argent" class="form-control">
+		</div>
+		
+		<button type="submit" class="btn-success">PROCEDER AU TRANSFERT</button>
+	</form>
+	</div>
+</div>
+{% endblock %}
