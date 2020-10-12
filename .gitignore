@@ -2,3 +2,5 @@ env/
 financial_speed/__pycache__/
 transactions/__pycache__/
 transactions/migrations/__pycache__/
+staticfiles/
+.env

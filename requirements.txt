@@ -2,7 +2,9 @@ Django==2.2.16
 django-crispy-forms==1.9.2
 gunicorn==20.0.4
 Pillow==7.2.0
-psycopg2==2.8.6
+pkg-resources==0.0.0
+psycopg2-binary==2.8.6
+python-decouple==3.3
 pytz==2020.1
 six==1.15.0
 sqlparse==0.3.1
